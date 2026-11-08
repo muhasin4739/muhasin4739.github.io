@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ range .Params.hobbies }}
+<section class="band">
+  <div class="inner hobby">
+    <img src="{{ printf "images/%s" .image | relURL }}" alt="{{ .name }}">
+    <div>
+      <h3>{{ .name }}</h3>
+      <p>{{ .text }}</p>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

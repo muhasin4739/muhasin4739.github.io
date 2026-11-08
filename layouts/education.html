@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ range .Params.items }}
+<section class="band">
+  <div class="inner split">
+    <div class="edu-text">
+      <h3>{{ .degree }}</h3>
+      <p class="place">{{ .institution }}</p>
+      {{ with .year }}<p class="small">{{ . }}</p>{{ end }}
+      {{ with .result }}<p class="small">{{ . }}</p>{{ end }}
+      {{ with .status }}<p class="status">{{ . }}</p>{{ end }}
+    </div>
+    <img src="{{ printf "images/%s" .image | relURL }}" alt="{{ .institution }}">
+  </div>
+</section>
+{{ end }}
+{{ end }}

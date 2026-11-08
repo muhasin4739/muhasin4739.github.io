@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="band">
+  <div class="inner about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <table class="info">
+        {{ range .Params.about }}
+        <tr><th>{{ .label }}</th><td>{{ .value }}</td></tr>
+        {{ end }}
+      </table>
+    </div>
+    {{ with .Params.photo }}
+    <img class="portrait" src="{{ printf "images/%s" . | relURL }}" alt="Md Muhasin Ali">
+    {{ end }}
+  </div>
+</section>
+
+<section class="band">
+  <div class="inner narrow">
+    <h2>My Introduction</h2>
+    <div class="intro">{{ .Content }}</div>
+  </div>
+</section>
+{{ end }}

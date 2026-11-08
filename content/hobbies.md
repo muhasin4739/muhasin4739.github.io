@@ -1,0 +1,21 @@
+---
+title: "Hobbies"
+layout: "hobbies"
+hero: "hero-hobbies"
+hobbies:
+  - name: "Reading Books"
+    image: "h-reading.jpg"
+    text: "Islamic book reading, a practice rich in intellectual and spiritual development, provides insightful perspectives on faith, history, and culture and helps readers develop a stronger understanding of and bond with the core ideas and teachings of Islam."
+  - name: "Chess Play"
+    image: "h-chess.jpg"
+    text: "For players of all skill levels, chess provides an engrossing balance of challenge and friendship. It is a game of strategic depth and mental agility."
+  - name: "Photography"
+    image: "h-photo.jpg"
+    text: "Photography provides countless options for creativity and self-expression because it is the art of capturing moments and communicating tales via photographs."
+  - name: "Gardening"
+    image: "h-garden.jpg"
+    text: "A calming and rewarding hobby, gardening enables people to foster life, establish beautiful, flourishing environments, and establish a connection with the natural world."
+  - name: "Bike Riding"
+    image: "h-bike.jpg"
+    text: "Bike riding is an adrenaline-filled, non-traditional sporting experience that combines athleticism and creativity, fusing the thrill of cycling with tactical control and skill."
+---

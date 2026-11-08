@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ "/" | relURL }}">Portfolio</a>
+    <nav>
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+        <a href="{{ .URL }}" class="{{ if $current.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </header>
+
+  <section class="hero {{ with .Params.hero }}{{ . }}{{ end }}">
+    <h1><span>{{ with .Params.heroTitle }}{{ . }}{{ else }}{{ .Title }}{{ end }}</span></h1>
+  </section>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Thank you for watching my portfolio</p>
+  </footer>
+</body>
+</html>

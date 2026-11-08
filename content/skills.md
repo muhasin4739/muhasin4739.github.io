@@ -1,0 +1,22 @@
+---
+title: "Skills"
+layout: "skills"
+hero: "hero-skills"
+skills:
+  - name: "Python"
+    image: "python.jpg"
+  - name: "Java"
+    image: "java.jpg"
+  - name: "C Programming"
+    image: "c.jpg"
+  - name: "Web Design"
+    image: "webdesign.jpg"
+  - name: "HTML"
+    image: "html.jpg"
+  - name: "Research"
+    image: "research.jpg"
+  - name: "Microsoft Office"
+    image: "office.jpg"
+  - name: "Chess Expert"
+    image: "chess.jpg"
+---

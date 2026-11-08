@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="band">
+  <div class="inner contact-row">
+    {{ range .Params.links }}
+    <a class="contact-item" href="{{ .url }}" target="_blank" rel="noopener">
+      <img src="{{ printf "images/%s" .image | relURL }}" alt="{{ .name }}">
+      <span>{{ .name }}</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

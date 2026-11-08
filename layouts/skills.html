@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ $skills := .Params.skills }}
+{{ range seq 0 2 (sub (len $skills) 1) }}
+<section class="band">
+  <div class="inner skill-row">
+    {{ range first 2 (after . $skills) }}
+    <div class="skill">
+      <img src="{{ printf "images/%s" .image | relURL }}" alt="{{ .name }}">
+      <h3>{{ .name }}</h3>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}
